@@ -1,0 +1,40 @@
+# data
+num_workers: 4
+batch_size: 48
+
+# dataset
+dataset_path: "data/all_success.pkl"
+spatial_augment: True
+voxel_size: 0.0125
+neighbor_radius: 0.045
+
+# optimizer adam
+epochs: 100
+lr: 1e-4
+weight_decay: 0
+
+# Model
+device: "cuda"
+image_size: 224
+patch_size: 16
+dim: 512
+depth: 6
+heads: 8
+mlp_ratio: 4
+channels: 1
+dropout: 0.0
+emb_dropout: 0.0
+graph_encoder_path: "train/vsbl_edge_best.pth"
+num_nodes: 200
+
+# saved model info
+save_model_name: "All"
+
+# train success head
+train_success_head: True
+trained_model_path: "train/trained_models/All/model/epoch119.pth"
+
+# training
+continue_train: False
+checkpoint_path: 
+already_trained_epochs: 

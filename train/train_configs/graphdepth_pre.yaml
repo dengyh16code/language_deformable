@@ -1,0 +1,41 @@
+# data
+num_workers: 6
+batch_size: 64
+
+# dataset
+dataset_path: "data/All_done.pkl"
+spatial_augment: True
+voxel_size: 0.0125
+neighbor_radius: 0.045
+
+# optimizer adam
+epochs: 100
+lr: 1e-4
+weight_decay: 0
+
+# Model
+type: "graphdepth"
+device: "cuda:2"
+image_size: 224
+patch_size: 16
+dim: 512
+depth: 8
+heads: 16
+mlp_ratio: 4
+channels: 1
+dropout: 0.0
+emb_dropout: 0.0
+graph_encoder_path: "train/vsbl_edge_best.pth"
+num_nodes: 200
+
+# saved model info
+save_model_name: "GraphDepth1000"
+
+# train success head
+train_success_head: True
+trained_model_path: "/home/yuhong/softgym/train/trained_models/GraphDepth1000/model/epoch99.pth"
+
+# training
+continue_train: False
+checkpoint_path: 
+already_trained_epochs: 

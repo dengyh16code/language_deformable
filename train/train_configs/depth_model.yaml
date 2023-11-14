@@ -1,0 +1,37 @@
+# data
+num_workers: 6
+batch_size: 24
+
+# dataset
+dataset_path: "data/All_100.pkl"  #Task type: CornerFold, TriangleFold, TshirtFold, TrousersFold
+spatial_augment: True
+voxel_size: 0.0125
+neighbor_radius: 0.045
+
+# optimizer adam
+epochs: 100
+lr: 1e-4
+weight_decay: 0
+
+# Model
+type: "depthonly"
+device: "cuda:1"
+image_size: 224
+patch_size: 16
+dim: 512
+depth: 8
+heads: 16
+mlp_ratio: 4
+channels: 1
+dropout: 0.0
+emb_dropout: 0.0
+num_nodes: 200
+train_success_head: False
+
+# saved model info
+save_model_name: "DepthOnly100"
+
+# training
+continue_train: False
+checkpoint_path: 
+already_trained_epochs: 
