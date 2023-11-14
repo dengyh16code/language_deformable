@@ -31,9 +31,13 @@ This simulation environment is based on SoftGym. You can follow the instructions
 
 1. Clone this repository.
 
-2. create a conda environment.
+2. install some packages.
   ~~~
-  conda env create -f environment.yml
+    * pytorch, torchvision: `pip install torchvision` or `conda install torchvision -c pytorch`
+    * torch-scatter, torch-sparse, torch-geometric (related to the version of pytorch)
+    * einops: `pip install einops`
+    * tqdm: `pip install tqdm`
+    * yaml: `pip install PyYaml`
   ~~~
 
 3. Before you use the code, you should make sure the conda environment activated(`conda activate language_def`) and set up the paths appropriately: 
